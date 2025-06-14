@@ -4,7 +4,6 @@ const data = require('./data')
 
 // Connect to DATABASE
 
-//const DATABASE_URL = "mongodb://localhost/subscribers";
 const DATABASE_URL = "mongodb+srv://SunySharma:Sunny@2002@cluster0.8jtdvca.mongodb.net/youtubeSubscribersDB?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(DATABASE_URL,{ useNewUrlParser: true, useUnifiedTopology: true });
