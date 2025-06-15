@@ -22,4 +22,19 @@ const db = mongoose.connection;
 db.on('error', (err) => console.error('Connection error:', err));
 db.once('open', () => console.log('Connected to MongoDB Atlas'));
 
+
+app.get('/', (req, res) => {
+  res.send(`
+    <h2>Get YouTube Subscribers</h2>
+    <p>This is a simple API project using Node.js and MongoDB.</p>
+    <ul>
+      <li><a href="/subscribers">/subscribers</a></li>
+      <li><a href="/subscribers/names">/subscribers/names</a></li>
+      <li><a href="/subscribers/YOUR_VALID_ID_HERE">/subscribers/:id</a></li>
+    </ul>
+  `);
+});
+
+
+
 app.listen(port, () => console.log(`App listening on port ${port}!`));
